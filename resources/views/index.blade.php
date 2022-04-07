@@ -1,5 +1,5 @@
 @extends('layout')
 
 @section('main_content')
-@section('title') LOTR @endsection
+@section('title') LOTR AAAA@endsection
 @endsection
