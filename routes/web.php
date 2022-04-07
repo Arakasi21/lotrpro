@@ -17,3 +17,7 @@ Route::get('/header', function () {
     return view('header');
 });
 
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+
