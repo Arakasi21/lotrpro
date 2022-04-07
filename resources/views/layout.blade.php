@@ -25,7 +25,7 @@
                     <ul class="navbar-nav">
 
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html"> <i class="fa fa-shield" aria-hidden="true"></i> Kingdoms</a>
+                            <a class="nav-link" href="/kingdoms"> <i class="fa fa-shield" aria-hidden="true"></i> Kingdoms</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="author.html"> <i class="fa fa-book" aria-hidden="true"></i> Author</a>
