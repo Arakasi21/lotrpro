@@ -1,0 +1,10 @@
+.nav-link{
+    font-family: lotr;
+    font-size: 30px;
+    color: #ffc500;
+    margin-right: 15px;
+}
+
+.nav-link:hover{
+    color: white;
+}

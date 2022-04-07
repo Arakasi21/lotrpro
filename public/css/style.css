@@ -1,0 +1,43 @@
+@font-face{
+    font-family: 'lotr';
+    src: url('../fonts/MorrisRoman-Black.eot');
+    src: url("../fonts/MorrisRoman-Black.ttf") format("truetype");
+    src: url('../fonts/MorrisRoman-Black.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MorrisRoman-Black.woff') format('woff');
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #280033;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: gold;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: white
+}
+
+/* шрифты и хедеры */
+
+h1{
+    font-family: lotr;
+}
+
+
+.nav-link{
+    font-family: lotr;
+    font-size: 30px;
+    color: #ffc500 !important;
+    margin-right: 15px;
+}
+
+.nav-link:hover{
+    color: white !important;
+}
