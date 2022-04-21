@@ -21,15 +21,53 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: white
+    background: white;
 }
-
-/* шрифты и хедеры */
 
 h1{
     font-family: lotr;
 }
+h2{
+    text-align: center;
+    font-size: 35px;
+}
 
+h4{
+    font-family: lotr;
+
+    color: white;
+}
+
+h5{
+    font-size: 25px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+table, td, tr {
+    border: 1px solid gold;
+    background-color:  black;
+}
+/* bootstrap карточки в индексе*/
+.card-title{
+    font-family: lotr;
+    color: #ffc500;
+    font-size: 25px;
+}
+.card-titlet{
+    font-family: lotr;
+    color: #ffc500;
+    font-size: 25px;
+}
+
+.card-deck{
+    margin-right: 10px;
+    margin-left: 10px;
+}
 
 .nav-link{
     font-family: lotr;
@@ -38,6 +76,189 @@ h1{
     margin-right: 15px;
 }
 
+.nav-linka{
+    font-size: 30px !important;
+    color: #ffc500 !important;
+    margin-left: 15px;
+}
+
 .nav-link:hover{
     color: white !important;
+}
+
+
+/* bootstrap */
+
+
+.card-body{
+    background-color: #280033;}
+.shop{
+    background-color: #ffffff;}
+.description{
+    color: #7F7F7F;
+    font-size: 20px;
+}
+.price{
+    align-content: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+.form-group{
+    margin-bottom: 10px;
+}
+.signups{
+    margin-top: 21.299254526091588vh !important;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 31.3839190628328vh !important;
+    border: 0px solid gray;
+    padding: 50px 0px;
+}
+.headerz {
+    padding: 80px;
+    text-align: center;
+    background-image: url("img/gendalf.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.headerz h1 {
+    font-size: 70px;
+    color: #ffc500;
+}
+
+.kingd{
+    font-family: lotr;
+    margin: 0;
+
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+p{
+    font-size: 30px;
+}
+
+hr.style-eight {
+    overflow: visible; /* For IE */
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+hr.style-eight:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: relative;
+}
+table{
+    background-color: black;
+}
+.maint{
+    background-color: black;
+    color: #ffc500;;
+    font-family: lotr;
+    font-size: 30px;
+}
+td{
+    text-align: center;
+}
+
+/*для тейбла линия*/
+td hr{
+    overflow: visible;
+    height: 30px;
+    border-style: solid;
+    border-color: #ffc500;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+
+td hr:before{
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: #ffc500;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+.jrrbody{
+    font-family: Arial;
+    padding: 1px;
+    background-color: black;}
+td h4{
+    color: white;
+}
+td p{
+    font-family: lotr;
+    font-size: 30px;
+    color: white;
+    text-align: left;}
+
+
+/*isotope*/
+.menukng{
+    text-align: center;
+}
+
+.menukng ul li{
+    font-family: lotr;
+    font-size: 25px;
+    display: inline-block;
+    list-style: none;
+    padding: 10px 30px;
+    border:  1px solid;
+    cursor: pointer;
+    border-radius: 13em/3em;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.sms{
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+.menukng .active{
+    color: white;
+    background-color:  #363636;
+}
+.menukng .good{
+    background-color: #88A270;
+}
+
+.menukng .evil{
+    background-color: #D8392B;
+}
+
+
+.scrollTop{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    background-color: #2B2D2F;
+    color: gold;
+    border-radius: 1px solid #fff;
+    cursor: pointer;
+    transition: all 1.5s ease 0s;
+}
+.scrollTop:hover{
+    background-color: #f7f7f7;
+    color: #000;
+}
+
+.rotateicon{
+    color: gold;
 }
