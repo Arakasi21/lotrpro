@@ -1,5 +1,7 @@
 <?php
 namespace App\Models;
+
+use App\Models\Order;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -22,4 +24,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected $dates = [
+        'current_sign_in_at','last_sign_in_at'
+    ];
+
+    public function orders(){
+        return $this->hasMany('App\Models\Order');
+    }
 }

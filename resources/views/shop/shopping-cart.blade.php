@@ -28,7 +28,7 @@
         </div>
         <div class="row justify-content-md-center" style="margin-bottom: 480px">
             <div class="col col-lg-2">
-              <strong style="margin-right: 50px;">Total: {{   $totalPrice}}</strong>
+              <strong style="margin-right: 50px;">Total: {{   $totalPrice}}$</strong>
                 <a href="{{route('checkout')}}" class="btn btn-success">Checkout</a></div>
             </div>
         </div>

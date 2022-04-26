@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
-
-use Illuminate\Support\Facades\Auth;
+use App\Models\Order;
+use App\Models\Cart;
+use Auth;
+use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Model;
+use Session;
 class UserController extends Controller
 {
     public function getSignup(){
@@ -26,6 +30,12 @@ class UserController extends Controller
 
         Auth::login($user);
 
+        if (Session::has('oldUrl')) {
+            $oldUrl = Session::get('oldUrl');
+            Session::forget('oldUrl');
+            return redirect()->to($oldUrl);
+        }
+
         return redirect()->route('shop.index');
     }
 
@@ -39,17 +49,23 @@ class UserController extends Controller
         ]);
 
     if (Auth::attempt(['email' => $request -> input('email'),'password' => $request -> input('password')])){
+
         return redirect()->route('user.profile');
         }
     return redirect()->back();
     }
 
     public function getProfile(){
-        return view('user.profile');
+        $orders = Auth::user()->orders;
+        $orders->transform(function($order, $key) {
+            $order->cart = unserialize(base64_decode($order->cart));
+            return $order;
+        });
+        return view('user.profile', ['orders' => $orders]);
     }
 
     public function getLogout(){
         Auth::logout();
-        return redirect()->back();
+        return redirect()->route("user.signin");
     }
 }

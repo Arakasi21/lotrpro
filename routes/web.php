@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
+
 Route::get('/', [MainController::class, 'indexa']);
 
 Route::get('/add-to-cart/{id}', [MainController::class, 'getAddToCart'])->name('product.addToCart');
@@ -15,11 +16,6 @@ Route::get('/shopping-cart', [MainController::class, 'getCart'])->name('product.
 Route::get('/shop',[MainController::class,'getIndex'])->name('shop.index');
 
 Route::get('/kingdoms', [MainController::class, 'kingdoms']);
-
-
-Route::get('/checkout', [MainController::class, 'getCheckout'])->name('checkout');
-
-Route::post('/checkout', [MainController::class, 'postCheckout']);
 
 Route::group([
     'prefix' => 'user',
@@ -37,6 +33,10 @@ Route::group([
     });
 
     Route::middleware('auth')->group(function () {
+
+        Route::get('/checkout', [MainController::class, 'getCheckout'])->name('checkout');
+
+        Route::post('/checkout', [MainController::class, 'postCheckout']);
 
         Route::get('/profile', [UserController::class, 'getProfile'])->name('user.profile')->middleware('auth');
 

@@ -1,6 +1,6 @@
 <body  style="background-color: #d3ac6e;">
 
-<nav class="navbar navbar-expand-lg" style="background-color:#280033 ;">
+<nav class="navbar navbar-expand-lg" style="background-color:#280033;">
     <div class="container-fluid"> <div data-aos="fade-right" class="aos-init aos-animate">
             <a class="navbar-brand nav-linka" href="kingdoms">
                 <img src="/favicon.ico" alt="" width="40" height="35" class="d-inline-block align-text-center">Fandom
@@ -36,6 +36,8 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                         @if(Auth::check())
+                            <li>{{ Auth::user()->email }}</li>
+                            <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="{{route('user.profile')}}">Profile</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="{{route('user.logout')}}">Logout</a></li>

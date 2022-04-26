@@ -107,10 +107,18 @@ table, td, tr {
     margin-bottom: 10px;
 }
 .signups{
-    margin-top: 21.299254526091588vh !important;
+    margin-top: 16.299254526091588vh !important;
     text-align: center;
     width: 100%;
     margin-bottom: 31.3839190628328vh !important;
+    border: 0px solid gray;
+    padding: 50px 0px;
+}
+.signupss{
+    margin-top: 6.299254526091588vh !important;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 3.3839190628328vh !important;
     border: 0px solid gray;
     padding: 50px 0px;
 }
@@ -261,4 +269,24 @@ td p{
 
 .rotateicon{
     color: gold;
+}
+
+
+hr.style-seven {
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+hr.style-seven:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
 }
