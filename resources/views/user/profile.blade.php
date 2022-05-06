@@ -5,10 +5,7 @@
     <div class="signupss">
         <div class="col-md-12">
            <h1>User Profile</h1>
-            <p>Welcome : {{ Auth::user()->email }} !</p>
-            <p>Account created: {{ Auth::user()->created_at}}</p>
-            <p>Last Login Time: {{ auth()->user()->last_sign_in_at}}</p>
-            <p>Current Login Time: {{ auth()->user()->current_sign_in_at}}</p>
+            <p>Welcome : {{ Auth::user()->name }}!</p>
         </div>
 
         <section style="margin-top: 30px;">
@@ -35,5 +32,13 @@
                 </div>
             @endforeach
         </section>
+
+
+        <div style="margin-top: 80px;">
+            <hr class="style-eight">
+            <p>Account created: {{ Auth::user()->created_at}}</p>
+            <p>Last Login Time: {{ Auth()->user()->last_sign_in_at}}</p>
+            <p>Current Login Time: {{ Auth()->user()->current_sign_in_at}}</p>
+        </div>
     </div>
 @endsection

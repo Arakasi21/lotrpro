@@ -14,6 +14,9 @@
         @endif
         <form action="{{route('user.signup')}}" method="post">
             <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="name">
+            </div>
+            <div class="form-group">
                 <input type="text" id="email" name="email" placeholder="email">
             </div>
             <div class="form-group">

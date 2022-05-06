@@ -36,7 +36,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                         @if(Auth::check())
-                            <li>{{ Auth::user()->email }}</li>
+                            <li><h4 class="dropdown-item">{{ Auth::user()->name }}</h4></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="{{route('user.profile')}}">Profile</a></li>
                             <li><hr class="dropdown-divider"></li>
