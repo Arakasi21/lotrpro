@@ -16,9 +16,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/kingdoms"> <i class="fa fa-shield" aria-hidden="true"></i> Kingdoms</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/author"> <i class="fa fa-feather" aria-hidden="true"></i> Author</a>
-                </li>
+{{--                <li class="nav-item">--}}
+{{--                    <a class="nav-link" href="/author"> <i class="fa fa-feather" aria-hidden="true"></i> Author</a>--}}
+{{--                </li>--}}
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('shop.index')}}"> <i class="fa fa-book" aria-hidden="true"></i> Book Store</a>
                 </li>
@@ -35,9 +35,15 @@
                         <i class="fa fa-user" aria-hidden="true"></i> User Management
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        @if(Auth::check())
+                        @if(Auth::check() && Auth::user()->is_admin == 0)
                             <li><h4 class="dropdown-item">{{ Auth::user()->name }}</h4></li>
                             <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{route('user.profile')}}">Profile</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{route('user.logout')}}">Logout</a></li>
+                        @elseif(Auth::check() && Auth::user()->is_admin == 1)
+                            <li><a class="dropdown-item" href="{{route('admin-view')}}">Admin</a></li>
+                        <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="{{route('user.profile')}}">Profile</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="{{route('user.logout')}}">Logout</a></li>

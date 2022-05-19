@@ -2,13 +2,18 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+
 use App\Models\User;
 use App\Models\Order;
 use App\Models\Cart;
+
 use Auth;
+
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
+
 use Session;
+
 class UserController extends Controller
 {
     public function getSignup(){
@@ -70,4 +75,5 @@ class UserController extends Controller
         Auth::logout();
         return redirect()->route("user.signin");
     }
+
 }

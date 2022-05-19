@@ -201,10 +201,6 @@ td hr:before{
     border-width: 0 0 1px 0;
     border-radius: 20px;
 }
-.jrrbody{
-    font-family: Arial;
-    padding: 1px;
-    background-color: black;}
 td h4{
     color: white;
 }
@@ -213,8 +209,6 @@ td p{
     font-size: 30px;
     color: white;
     text-align: left;}
-
-
 /*isotope*/
 .menukng{
     text-align: center;

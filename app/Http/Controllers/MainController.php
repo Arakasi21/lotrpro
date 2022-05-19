@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use Auth;
+use Illuminate\Support\Facades\DB;
 use Session;
 use Stripe\Stripe;
 use Stripe\Charge;
@@ -21,7 +22,7 @@ use Stripe\Charge;
 class MainController extends Controller
 {
     public function indexa() {
-        return view('indexa');
+        return view('kingdoms');
     }
 
     public function kingdoms() {
@@ -33,10 +34,6 @@ class MainController extends Controller
         return view('shop.index', ['products' => $products]);
     }
 
-    public function author() {
-        return view('author');
-    }
-
     public function getAddToCart(Request $request, $id){
         $product = Product::find($id);
         $oldCart = Session::has('cart') ? Session::get('cart') : null;
@@ -45,6 +42,34 @@ class MainController extends Controller
 
         $request->session()->put('cart',$cart);
         return redirect()->route('shop.index');
+    }
+
+
+    public function getReduceByOne($id) {
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart = new Cart($oldCart);
+        $cart->reduceByOne($id);
+
+        if (count($cart->items) > 0) {
+            Session::put('cart', $cart);
+        } else {
+            Session::forget('cart');
+        }
+        return redirect()->route('product.shoppingCart');
+    }
+
+    public function getRemoveItem($id) {
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart = new Cart($oldCart);
+        $cart->removeItem($id);
+
+        if (count($cart->items) > 0) {
+            Session::put('cart', $cart);
+        } else {
+            Session::forget('cart');
+        }
+
+        return redirect()->route('product.shoppingCart');
     }
 
     public function getCart(){
@@ -80,7 +105,7 @@ class MainController extends Controller
                 "amount" => $cart->totalPrice * 100,
                 "currency" => "usd",
                 "source" => "tok_visa",
-                "description" => "Charge for meeeeeee"
+                "description" => "Book purchase"
             ));
             $order = new Order();
             $order -> cart = base64_encode(serialize($cart));
@@ -95,6 +120,32 @@ class MainController extends Controller
         }
         Session::forget('cart');
         return redirect()-> route('shop.index')->with('success', "Successfully purchased book!!!");
+    }
+
+    public function adminView(){
+        $data = User::all()->sortBy('id');;
+        $dataorder = Order::all()->sortBy('id');
+        return view('adminview' ,['users' => $data],['ordersa' => $dataorder]);
+    }
+
+    public function productview(){
+        $prod = Product::all()->sortBy('id');
+        return view('productview', ['products' => $prod], compact('prod'));
+    }
+
+
+    public function addnewproduct(){
+        return view('addnewproduct');
+    }
+
+    public function insert(Request $request){
+        $product =  new Product();
+        $product-> title = $request->input('title');
+        $product-> description = $request->input('description');
+        $product-> imagePath = $request->input('imagePath');
+        $product-> price = $request->input('price');
+        $product->save();
+        return redirect()->route('product-view');
     }
 }
 
