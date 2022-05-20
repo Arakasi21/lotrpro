@@ -24,7 +24,6 @@
                                         {{ $item['item']['title'] }} | {{ $item['qty'] }} Book
                                         <span class="badge bg-success rounded-pill">${{ $item['price'] }}</span>
                                     </li>
-
                                 @endforeach
                             </ul>
                         </div>
