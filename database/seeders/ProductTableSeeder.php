@@ -16,7 +16,7 @@ class ProductTableSeeder extends Seeder
                 'name' => 'Arsen',
                 'email' => 'adminas@gmail.com',
                 'password' => '123456',
-                'is_admin' => 1,
+                'is_admin' => '1',
             ],
 
         ];
