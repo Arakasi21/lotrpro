@@ -76,4 +76,24 @@ class UserController extends Controller
         return redirect()->route("user.signin");
     }
 
+
+    public function useredit(User $user)
+    {
+        $user = Auth::user();
+        return view('user.useredit', compact('user'));
+    }
+
+    public function userupdate(Request $request)
+    {
+
+        $user = Auth::user();
+
+        $user->name = $request->input('name');
+        $user->email =$request->input('email');
+        $user->password = bcrypt($request->input('password'));
+
+        $user->save();
+        return back();
+    }
+
 }

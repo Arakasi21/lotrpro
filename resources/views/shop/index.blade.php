@@ -35,15 +35,17 @@
                                 <p class="card-text description">{{ $product->description }}</p>
                                 <hr>
                                 <div class="clearfix">
-                                    <div class="float-start price">${{ $product->price }}</div>
-                                    <a href="{{route('product.addToCart', ['id'=> $product->id])}}" class="btn btn-success float-end">Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    @endforeach
-                </div>
-            </div>
+                                    <div class="float-start price btn btn-success" ">${{ $product->price }}</div>
+            <a  class="btn btn-primary" style="margin-left: 25%;" href="{{route('post.view',$product->id)}}">Review</a>
+            <a href="{{route('product.addToCart', ['id'=> $product->id])}}" class="btn btn-success float-end">Add to cart</a>
         </div>
-    @endforeach
+    </div>
+</div>
+</div>
+@endforeach
+</div>
+</div>
+</div>
+@endforeach
+    <script src="//code.jivo.ru/widget/GuagzEsLvI" async></script>
 @endsection

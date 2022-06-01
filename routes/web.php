@@ -1,5 +1,7 @@
 <?php
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,8 +19,27 @@ Route::get('/shop',[MainController::class,'getIndex'])->name('shop.index');
 
 Route::get('/kingdoms', [MainController::class, 'kingdoms']);
 
+Route::get('/post-view/{id}',[MainController::class, 'view'])->name('post.view')->middleware('auth');;
+
+Route::post('/review-store',[MainController::class, 'reviewstore'])->name('review.store')->middleware('auth');;
+
+Route::resource('products', BookController::class);
+
+Route::delete('/userdestroy/{id}', [UserController::class, 'userdestroy'])->name('userdestroy');
+
+Route::delete('/reviewdestroy/{id}', [MainController::class, 'reviewdestroy'])->name('reviewdestroy');
+
+
+Route::delete('/ordertroy/{id}', [MainController::class, 'orderdestroy'])->name('orderdestroy');
+
+Route::get('/reviewview', [MainController::class, 'reviewview'])->name('review-view');
+
+
 Route::middleware('admin')->group(function (){
     Route::get('/adminview', [MainController::class, 'adminView'])->name('admin-view');
+
+    Route::get('/orderview', [MainController::class, 'orderView'])->name('order-view');
+
 
     Route::get('/productview', [MainController::class, 'productview'])->name('product-view');
 
@@ -50,6 +71,10 @@ Route::group([
         Route::get('/profile', [UserController::class, 'getProfile'])->name('user.profile')->middleware('auth');
 
         Route::get('/logout', [UserController::class, 'getLogout'])->name('user.logout')->middleware('auth');
+
+        Route::get('/useredit',  [UserController::class, 'useredit'])->name('user-edit');
+
+        Route::patch('/user-update',  [UserController::class, 'userupdate']);
 
     });
 });

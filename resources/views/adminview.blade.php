@@ -2,16 +2,24 @@
 @section('title') Admin Panel @endsection
 @section('main_content')
     <br>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Admin Panel</div>
-
-                    <div class="card-body" style="background-color: white">
+                    <div class="card-header">Admin Control Panel</div>
+                    <div class="card-body" style="background-color: white; text-align: center">
                         Welcome to admin dashboard!
                         <br>
-                        Redirect to <a  href="{{route('product-view')}}">Books</a>
+                        <br>
+                        <a  class="btn btn-warning" style="text-decoration: none" href="{{route('order-view')}}">Order Panel</a>
+
+                        <a  class="btn btn-primary" style="text-decoration: none" href="{{route('admin-view')}}">Admin Panel</a>
+
+                        <a  class="btn btn-success" style="text-decoration: none" href="{{route('product-view')}}">Book Panel</a>
+
+                        <a  class="btn btn-info" style="text-decoration: none" href="{{route('review-view')}}">Review Panel</a>
+
+
                     </div>
 
 
@@ -24,12 +32,16 @@
     <br>
 
     <div class="container">
-    <table class="table table-striped table-bordered">
+        <h1 class="display-5">Users</h1>
+        <hr>
+    <div class="table-wrap">
+        <table class="table table-bordered table-responsive">
         <thead class="table-success">
         <tr style="background-color: white">
-            <td>User ID</td>
+            <td>#</td>
             <td>Name</td>
             <td>Email</td>
+            <td>Action</td>
         </tr>
         </thead>
         <tbody>
@@ -38,40 +50,22 @@
                 <td>{{$user['id']}}</td>
                 <td>{{$user['name']}}</td>
                 <td>{{$user['email']}}</td>
+                <td>
+                    <form action="{{ route('userdestroy', $user->id)}}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-danger" type="submit">Delete</button>
+                    </form>
+                </td>
             </tr>
     @endforeach
             </tbody>
     </table>
     </div>
-
-
-
-    <br>
-    <div class="container">
-        <table class="table table-striped table-bordered">
-            <thead class="table-success">
-            <tr style="background-color: white">
-                <td>Order ID</td>
-                <td>Name</td>
-                <td>User Id</td>
-                <td>Address</td>
-                <td>Payment</td>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach($ordersa as $ordera)
-                <tr style="background-color: white">
-                    <td>{{$ordera['id']}}</td>
-                    <td>{{$ordera['name']}}</td>
-                    <td>{{$ordera['user_id']}}</td>
-                    <td>{{$ordera['address']}}</td>
-                    <td>{{$ordera['payment_id']}}</td>
-                </tr>
-            @endforeach
-            </tbody>
-        </table>
     </div>
 
+
     <br>
+
 
 @endsection

@@ -6,6 +6,7 @@
         <div class="row  gx-3 gy-2 align-items-center">
             <div class="col">
                 <h1>Checkout</h1>
+                <hr class="style-eight">
                 <h4 style="color: darkgreen">Your Total: ${{$total}}</h4>
                 <div class="charge-error" class="alert alert-danger {{Session::has('error') ? 'hidden' : ''}}">{{Session::get('error')}}</div>
                 <form action="{{route('checkout')}}" method="post" id="checkout-form">
@@ -14,19 +15,19 @@
                         <div class="col-xs-12">
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input type="text" id="name" class="form-control" required name="name">
+                                <input type="text" id="name" class="form-control" required name="name" value="{{ Auth::user()->name }}">
                             </div>
                         </div>
                         <div class="col-xs-12">
                             <div class="form-group">
                                 <label for="address">Address</label>
-                                <input type="text" id="address" class="form-control" required name="address">
+                                <input type="text" id="address" class="form-control" required name="address" value="{{ Auth::user()->email }}">
                             </div>
                         </div>
                         <div class="col-xs-12">
                             <div class="form-group">
                                 <label for="card-name">Card Holder Name</label>
-                                <input type="text" id="card-name" class="form-control" data-stripe="name" required>
+                                <input type="text" id="card-name" class="form-control" data-stripe="name" required value="{{ Auth::user()->name }}">
                             </div>
                         </div>
                         <div class="col-xs-12">
@@ -58,6 +59,7 @@
                             </div>
                         </div>
                     </div>
+                    <hr class="style-eight">
                     {{ csrf_field() }}
                     <button type="submit" class="submit btn btn-success" style="margin-bottom: 90px;">Buy Now!</button>
                 </form>

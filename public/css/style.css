@@ -6,6 +6,7 @@
     url('../fonts/MorrisRoman-Black.woff') format('woff');
 }
 
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -70,8 +71,8 @@ table, td, tr {
 }
 
 .nav-link{
-    font-family: lotr;
-    font-size: 30px;
+    font-family: 'Alegreya SC', serif;;
+    font-size: 25px;
     color: #ffc500 !important;
     margin-right: 15px;
 }
@@ -115,7 +116,7 @@ table, td, tr {
     padding: 50px 0px;
 }
 .signupss{
-    margin-top: 6.299254526091588vh !important;
+    margin-top: 0.299254526091588vh !important;
     text-align: center;
     width: 100%;
     margin-bottom: 20.3839190628328vh !important;
@@ -283,4 +284,205 @@ hr.style-seven:before { /* Not really supposed to work, but does */
     border-color: black;
     border-width: 0 0 1px 0;
     border-radius: 20px;
+}
+
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    display: none;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+
+.fakeimg {
+    background-color: #aaa;
+    width: 20%;
+    padding: 20px;
+}
+
+.avatar{
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.cartimg{
+    vertical-align: middle;
+    width: 50px;
+    height: 100px;
+}
+
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+.rating-container .form-control:hover, .rating-container .form-control:focus{
+    background: #fff;
+    border: 1px solid #ced4da;
+}
+.rating-container textarea:focus, .rating-container input:focus {
+    color: #000;
+}
+
+.indexback{
+    background-position: right 0px center;
+    background-repeat: repeat-x;
+background-image: linear-gradient(235deg,rgba(0,0,0,0.47) 0%,rgba(0,0,0,0.73) 100%),url(https://i.etsystatic.com/10566755/r/il/929ed2/2823681878/il_fullxfull.2823681878_iw4k.jpg)!important;
+}
+
+.back{
+    background-position: right 0px center;
+    background-repeat: no-repeat!important;
+    background-image: url(https://i.etsystatic.com/10566755/r/il/929ed2/2823681878/il_fullxfull.2823681878_iw4k.jpg)!important;
+}
+
+hr.new4 {
+    width:20%;
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 2px solid black;
+    opacity: 100%;
+    display: inline-block;
+    margin-bottom: 7px;
+}
+
+.map1{
+    background-size: cover!important;
+    background-position: center!important;
+    background-repeat: no-repeat!important;
+    background-blend-mode: normal!important;
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.45) 0%,rgba(0,0,0,0.55) 100%),url(https://www.theonering.com/wp-content/uploads/2022/03/gondor_map.jpg)!important;
+
+}
+
+.map2{
+    background-size: cover!important;
+    background-position: center!important;
+    background-repeat: no-repeat!important;
+    background-blend-mode: normal!important;
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.45) 0%,rgba(0,0,0,0.55) 98%),url(https://www.theonering.com/wp-content/uploads/2022/03/Numenor-by-Christopher-Tolkien.jpg)!important;
+}
+
+.map3{
+    background-size: cover!important;
+    background-position: center!important;
+    background-repeat: no-repeat!important;
+    background-blend-mode: normal!important;
+    background-image: linear-gradient(180deg, rgba(0,0,0,0.45) 0%,rgba(0,0,0,0.55) 100%),url(https://www.theonering.com/wp-content/uploads/2022/03/beleriand_map-300x220.jpg)!important;
+}
+
+.family1{
+    background-size: cover!important;
+    background-position: top!important;
+    background-repeat: no-repeat!important;
+    background-blend-mode: normal!important;
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.45) 0%,rgba(0,0,0,0.55)100%),url(https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_FMjpg_UX1000_.jpg)!important;
+}
+
+.family2{
+    background-size: cover!important;
+    background-position: top!important;
+    background-repeat: no-repeat!important;
+    background-blend-mode: normal!important;
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.45) 0%,rgba(0,0,0,0.55) 100%),url(https://m.media-amazon.com/images/M/MV5BZGMxZTdjZmYtMmE2Ni00ZTdkLWI5NTgtNjlmMjBiNzU2MmI5XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg)!important;
+}
+
+
+.family3{
+    background-size: cover!important;
+    background-position: top!important;
+    background-repeat: no-repeat!important;
+    background-blend-mode: normal!important;
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.45) 0%,rgba(0,0,0,0.55) 100%),url(https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg)!important;
+}
+
+
+.book1{
+    background-size: cover!important;
+    background-position: center!important;
+    background-repeat: no-repeat!important;
+    background-blend-mode: normal!important;
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.45) 0%,rgba(0,0,0,0.55) 100%),url(https://i.harperapps.com/hcuk/covers/9780007203543/x450.JPG)!important;
+}
+
+
+.book2{
+    background-size: cover!important;
+    background-position: center!important;
+    background-repeat: no-repeat!important;
+    background-blend-mode: normal!important;
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.15) 0%,rgba(0,0,0,0.35) 100%),url(https://i.harperapps.com/hcuk/covers/9780007203550/x450.JPG)!important;
+}
+
+
+.book3{
+    background-size: cover!important;
+    background-position: center!important;
+    background-repeat: no-repeat!important;
+    background-blend-mode: normal!important;
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.15) 0%,rgba(0,0,0,0.45) 100%),url(https://i.harperapps.com/hcuk/covers/9780261103597/x450.JPG)!important;
+}
+
+
+
+.textmap{
+    font-size: 1.75rem!important;
+    color: yellow!important;
+    line-height: 2.25rem!important;
+    text-shadow: 0em 0.08em 0em rgba(0,0,0,0.4)!important;
+    font-family: 'Alegreya SC', serif;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.leftk{
+    border-radius: 15px;
+    background-color: #e9ddc7;
+    padding-top: 2em!important;
+    padding-bottom: 2em!important;
+    width: 100%;
+}
+
+.bmain{
+ background-color: #c99868 !important;
+    color: black !important;
+    font-family: 'Alegreya SC', serif;
+    font-size: 19px !important;
+    border-color: transparent !important;
+    transition: opacity 1s ease-in-out;
+
+}
+
+.bmain:hover{
+    background-color: #c99875 !important;
+    color: black !important;
+    font-family: 'Alegreya SC', serif;
+    border-color: transparent !important;
+    opacity:1;
+
 }

@@ -1,9 +1,9 @@
 <body  style="background-color: #d3ac6e;">
 
-<nav class="navbar navbar-expand-lg" style="background-color:#280033;">
+<nav class="navbar navbar-expand-lg" style="background-color:rgb(2,3,129);">
     <div class="container-fluid"> <div data-aos="fade-right" class="aos-init aos-animate">
-            <a class="navbar-brand nav-linka" href="kingdoms">
-                <img src="/favicon.ico" alt="" width="40" height="35" class="d-inline-block align-text-center">Fandom
+            <a class="navbar-brand nav-linka" href="kingdoms"   style="font-family: 'Alegreya SC', serif;'">
+                <i class="fas fa-ring" aria-hidden="true"></i> Fandom
             </a>
         </div>
         <button class="navbar-toggler rotateicon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,7 +14,7 @@
             <div class="navbar-nav">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/kingdoms"> <i class="fa fa-shield" aria-hidden="true"></i> Kingdoms</a>
+                    <a class="nav-link" href="/kingdoms"> <i class="fa fa-home" aria-hidden="true"></i> Homepage</a>
                 </li>
 {{--                <li class="nav-item">--}}
 {{--                    <a class="nav-link" href="/author"> <i class="fa fa-feather" aria-hidden="true"></i> Author</a>--}}
