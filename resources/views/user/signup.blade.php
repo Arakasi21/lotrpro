@@ -19,6 +19,15 @@
             <div class="form-group">
                 <input type="text" id="email" name="email" placeholder="email">
             </div>
+
+            <div class="form-group">
+                <input type="text" id="phone" name="phone" placeholder="phone">
+            </div>
+
+            <div class="form-group">
+                <input type="hidden" id="imagePath" name="imagePath" value="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png">
+            </div>
+
             <div class="form-group">
                 <input type="password" id="password" name="password" placeholder="password">
             </div>

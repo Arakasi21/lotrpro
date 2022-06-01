@@ -38,6 +38,7 @@
                 <td>#</td>
                 <td>User Id</td>
                 <td>Name</td>
+                <td>Phone Number</td>
                 <td>Address</td>
                 <td>Payment</td>
                 <td>Cart</td>
@@ -51,6 +52,7 @@
                     <td>{{$ordera['id']}}</td>
                     <td>{{$ordera['user_id']}}</td>
                     <td>{{$ordera['name']}}</td>
+                    <td>{{$ordera['phone']}}</td>
                     <td>{{$ordera['address']}}</td>
                     <td>{{$ordera['payment_id']}}</td>
                     <td>

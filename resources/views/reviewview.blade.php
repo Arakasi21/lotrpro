@@ -41,6 +41,7 @@
                     <td>#Book ID</td>
                     <td>Name</td>
                     <td>Email</td>
+                    <td>Phone</td>
                     <td>Comments</td>
                     <td>Rating</td>
                     <td>Action</td>
@@ -53,6 +54,7 @@
                         <td>{{$review['product_id']}}</td>
                         <td>{{$review['name']}}</td>
                         <td>{{$review['email']}}</td>
+                        <td>{{$review['phone']}}</td>
                         <td>{{$review['comments']}}</td>
                         <td>{{$review['star_rating']}}</td>
 

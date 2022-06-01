@@ -24,7 +24,7 @@
                             @foreach($post_detail->ReviewData as $review)
                                 <div class="container">
                                     <div class="cards" style="background-color: #f9edd8">
-                                    <img src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png" class="avatar">
+                                    <img src="https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png" class="avatar">
                                     <span style="font-size: 20px" class="font-weight-bold ml-2">{{$review->name}}</span>
                                     <p class="mt-1">
                                         @for($i=1; $i<=$review->star_rating; $i++)
@@ -74,7 +74,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-0">
-                                    <input class="form-control" type="hidden" name="phone" placeholder="Phone" value="+7777777777" maxlength="40"/>
+                                    <input class="form-control" name="phone" value="{{Auth::user()->phone}}"  readonly required/>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="rate">

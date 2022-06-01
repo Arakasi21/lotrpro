@@ -9,13 +9,18 @@
         <div class="row text-center">
             <div class="col-3" style="background-color: #e9ddc7; border-right: 2px solid black;">
                 <div class="signupss">
-                    <img  width="200px" height="200" src="https://www.pngall.com/wp-content/uploads/12/Lord-Of-The-Rings-Transparent.png" alt="">
+{{--                    <img  width="200px" height="200" src="https://www.pngall.com/wp-content/uploads/12/Lord-Of-The-Rings-Transparent.png" alt="">--}}
+                    <img style="
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+   border: 1px solid black;"src="{{Auth::user()->imagePath}}" alt="">
                     <div class="">
                         <h1>User Profile  <a class="btn btn-success btn-sm rounded-0" href="{{route('user-edit')}}" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a></h1>
-
                         <hr>
                         <p>Welcome : {{ Auth::user()->name }}!</p>
                         <p>{{ Auth::user()->email }}</p>
+                        <p>{{ Auth::user()->phone}}</p>
 
                     </div>
                     <div style="margin-top: 40px;" >

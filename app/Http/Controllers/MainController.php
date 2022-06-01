@@ -95,6 +95,7 @@ class MainController extends Controller
             $order -> cart = base64_encode(serialize($cart));
             $order -> address = $request -> input('address');
             $order -> name = $request -> input('name');
+            $order -> phone = $request -> input('phone');
             $order -> payment_id = $charge->id;
             Auth:: user()->orders()->save($order);
         } catch(\Exception $e){
@@ -126,6 +127,7 @@ class MainController extends Controller
         $review->name    = $request->name;
         $review->email   = $request->email;
         $review->phone   = $request->phone;
+        $review->imagePath = $request->imagePath;
         $review->comments= $request->comment;
         $review->star_rating = $request->rating;
         $review->save();

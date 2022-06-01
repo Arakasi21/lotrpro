@@ -24,6 +24,14 @@
                                 <input type="text" id="address" class="form-control" required name="address" value="{{ Auth::user()->email }}">
                             </div>
                         </div>
+
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label for="address">Phone Number</label>
+                                <input type="text" id="phone" class="form-control" required name="phone" value="{{ Auth::user()->phone }}">
+                            </div>
+                        </div>
+
                         <div class="col-xs-12">
                             <div class="form-group">
                                 <label for="card-name">Card Holder Name</label>

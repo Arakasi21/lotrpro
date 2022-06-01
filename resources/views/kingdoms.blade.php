@@ -5,7 +5,7 @@
 @endsection
 @section('main_content')
 
-    <div class="indexback" style="margin-top: -15px">
+    <div class="indexback" style="margin-top: -23px">
         <p style="text-align:center;"> <img src="https://freepngimg.com/download/lord_of_the_rings/23778-4-lord-of-the-rings-logo-transparent.png" alt="">
         </p>
 

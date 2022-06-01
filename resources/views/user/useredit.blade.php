@@ -11,8 +11,16 @@
         <br>
         <div class="row">
             <div class="col-md-4 border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png"><span class="font-weight-bold">{{ Auth::user()->name }}</span><span class="text-black-50">{{ Auth::user()->email }}</span><span> </span></div>
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                    <img style="margin-top: 100px; width: 200px;
+  height: 200px;
+  border-radius: 50%;
+border: 1px solid black;" src="{{Auth::user()->imagePath}}">
+                    <span class="font-weight-bold">{{ Auth::user()->name }}</span>
+                    <span class="text-black-50">{{ Auth::user()->email }}</span>
+                </div>
             </div>
+
             <div class="col-md-6 border-right">
                 <div class="p-3 py-5">
                     <div class="d-flex justify-content-between align-items-center mb-3">
@@ -34,16 +42,24 @@
 
 
         <div style="margin-bottom: 18px;">
-            <input style="width: 100%" type="text" placeholder="Write Name" name="name"/>
+            <label for="name"> Write Name</label>
+            <input style="width: 100%" type="text" value="{{ Auth::user()->name }}" name="name"/>
         </div>
 
         <div style="margin-bottom: 18px;">
-            <input style="width: 100%" type="email"  placeholder="Write Email" name="email"/>
+            <label for="name"> Write Phone Number</label>
+            <input style="width: 100%" type="text"  value="{{ Auth::user()->phone }}" name="phone"/>
         </div>
 
         <div style="margin-bottom: 18px;">
-            <input  style="width: 100%" type="password"  placeholder="Confirm Password" name="password" />
+            <label for="name"> Write Email</label>
+            <input style="width: 100%" type="email"  value="{{ Auth::user()->email }}" name="email"/>
         </div>
+        <div style="margin-bottom: 18px;">
+        <label for="name"> Write Image Path</label>
+        <input style="width: 100%" type="text" value="{{Auth::user()->imagePath}}" name="imagePath"/>
+        </div>
+            <input  style="width: 100%" type="hidden"  value="{{Auth::user()->password}}" placeholder="Confirm Password" name="password" />
 
 
         <hr>

@@ -24,13 +24,17 @@ class UserController extends Controller
         $this->validate($request,[
             'name' => 'required|min:3',
             'email' => 'email|required|unique:users',
+            'phone' => 'required|min:11',
             'password' => 'required|min:4',
+            'imagePath' => 'required'
         ]);
 
         $user = new User([
             'name' => $request -> input('name'),
             'email' => $request -> input('email'),
-            'password' => bcrypt($request->input('password'))
+            'phone' => $request -> input('phone'),
+            'password' => bcrypt($request->input('password')),
+            'imagePath' => $request -> input('imagePath'),
         ]);
 
         $user->save();
@@ -90,10 +94,19 @@ class UserController extends Controller
 
         $user->name = $request->input('name');
         $user->email =$request->input('email');
-        $user->password = bcrypt($request->input('password'));
+        $user->phone = $request->input('phone');
+        $user->imagePath = $request -> input('imagePath');
+        $user->password = $request -> input('password');
 
         $user->save();
-        return back();
+        return redirect()->route("user.profile");
+    }
+
+    public function userdestroy($id)
+    {
+        $user = User::find($id);
+        $user->delete();
+        return redirect()->route('admin-view')->with('success', 'User deleted.');;
     }
 
 }
