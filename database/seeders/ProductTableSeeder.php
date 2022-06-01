@@ -17,20 +17,9 @@ class ProductTableSeeder extends Seeder
                 'name' => 'Admin',
                 'email' => 'admin@gmail.com',
                 'password' => '123456',
-                'is_admin' => '1',
+                'is_admin' => true,
             ],
-            [
-                'name' => 'User',
-                'email' => 'user@gmail.com',
-                'password' => '13456',
-                'is_admin' => null,
-            ],
-            [
-                'name' => 'Client',
-                'email' => 'client@gmail.com',
-                'password' => '13456',
-                'is_admin' => null,
-            ]
+
         ];
 
         foreach($users as $user)
