@@ -11,13 +11,12 @@ class ProductTableSeeder extends Seeder
 {
     public function run()
     {
-        User::truncate();
         $users = [
             [
                 'name' => 'Arsen',
                 'email' => 'adminas@gmail.com',
                 'password' => '123456',
-                'is_admin' => true,
+                'is_admin' => 1,
             ],
 
         ];
