@@ -11,6 +11,7 @@ class ProductTableSeeder extends Seeder
 {
     public function run()
     {
+        User::truncate();
         $users = [
             [
                 'name' => 'Arsen',
