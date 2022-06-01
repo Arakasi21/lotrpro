@@ -14,8 +14,8 @@ class ProductTableSeeder extends Seeder
         User::truncate();
         $users = [
             [
-                'name' => 'Admin',
-                'email' => 'admin@gmail.com',
+                'name' => 'Arsen',
+                'email' => 'adminas@gmail.com',
                 'password' => '123456',
                 'is_admin' => true,
             ],
