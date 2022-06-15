@@ -12,10 +12,7 @@
         <div class="row">
             <div class="col-md-4 border-right">
                 <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-                    <img style="margin-top: 100px; width: 200px;
-  height: 200px;
-  border-radius: 50%;
-border: 1px solid black;" src="{{Auth::user()->imagePath}}">
+                    <img style="margin-top: 100px; width: 200px;height: 200px;border-radius: 50%;border: 1px solid black;" src="{{Auth::user()->imagePath}}">
                     <span class="font-weight-bold">{{ Auth::user()->name }}</span>
                     <span class="text-black-50">{{ Auth::user()->email }}</span>
                 </div>
@@ -26,17 +23,11 @@ border: 1px solid black;" src="{{Auth::user()->imagePath}}">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h4 style="color: black" class="text-right">Profile Settings</h4>
                     </div>
-
-
-
         <div class="panel-heading">
             <h3 class="panel-title">User Edit Profile</h3>
         </div>
 
-        <hr>
-
-
-    <form  method="POST" action="{{url('user/user-update')}}" enctype="multipart/form-data">
+        <hr><form  method="POST" action="{{url('user/user-update')}}" enctype="multipart/form-data">
     {{ csrf_field() }}
     {{ method_field('patch') }}
 

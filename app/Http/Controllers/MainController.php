@@ -20,7 +20,7 @@ use Stripe\Charge;
 class MainController extends Controller
 {
     public function indexa() {
-        return view('kingdoms');
+        return view(' ');
     }
     public function kingdoms() {
         return view('kingdoms');
@@ -115,12 +115,10 @@ class MainController extends Controller
     public function addnewproduct(){
         return view('addnewproduct');
     }
-
     public function view($id){
         $post_detail = Product::with('ReviewData')->find($id);
         return view('post.view',compact('post_detail'));
     }
-
     public function reviewstore(Request $request){
         $review = new ReviewRating();
         $review->product_id = $request->product_id;
@@ -133,8 +131,6 @@ class MainController extends Controller
         $review->save();
         return redirect()->back()->with('flash_msg_success','Your review has been submitted Successfully');
     }
-
-
     public function insert(Request $request){
         $product =  new Product();
         $product-> title = $request->input('title');
@@ -153,20 +149,15 @@ class MainController extends Controller
             });
             return view('orderview' ,['ordersa' => $dataorder]);
         }
-
     public function reviewview(){
         $review = ReviewRating::all()->sortBy('product_id');
         return view('reviewview' ,['reviews' => $review]);
     }
-
     public function reviewdestroy($id){
         $review= ReviewRating::find($id);
         $review->delete();
         return redirect()->route('review-view');
     }
-
-
-
     public function updateprod(Request $request, $id)
     {
         $request->validate([

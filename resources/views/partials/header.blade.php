@@ -1,6 +1,6 @@
 <body  style="background-color: #d3ac6e;">
 
-<nav class="navbar navbar-expand-lg" style="background-color:rgb(2,3,129);">
+<nav class="navbar navbar-expand-lg" style="background-color: #1a202c;">
     <div class="container-fluid"> <div data-aos="fade-right" class="aos-init aos-animate">
             <a class="navbar-brand nav-linka" href="kingdoms"   style="font-family: 'Alegreya SC', serif;'">
                 <i class="fas fa-ring" aria-hidden="true"></i> Fandom

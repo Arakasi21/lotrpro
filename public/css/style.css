@@ -355,6 +355,17 @@ hr.style-seven:before { /* Not really supposed to work, but does */
 background-image: linear-gradient(235deg,rgba(0,0,0,0.47) 0%,rgba(0,0,0,0.73) 100%),url(https://i.etsystatic.com/10566755/r/il/929ed2/2823681878/il_fullxfull.2823681878_iw4k.jpg)!important;
 }
 
+.indexshopback{
+    background-position: center;
+    background-repeat: repeat-x;
+    background-image: linear-gradient(235deg,rgba(0,0,0,0.47) 0%,rgba(0,0,0,0.73) 100%), url(https://i.pinimg.com/originals/50/36/01/503601eb6b896ff8efeb3d7351d7a4e8.jpg) !important;
+}
+
+.indexprofileback{
+    background-position: center;
+    background-repeat: repeat-x;
+    background-image:linear-gradient(235deg,rgba(0,0,0,0.55) 0%,rgba(0,0,0,0.55) 100%),   url(https://cutewallpaper.org/22/middle-earth-map-wallpapers/2689918678.jpg) !important;
+}
 .back{
     background-position: right 0px center;
     background-repeat: no-repeat!important;

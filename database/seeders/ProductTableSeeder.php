@@ -27,8 +27,8 @@ class ProductTableSeeder extends Seeder
             User::create([
                 'name' => $user['name'],
                 'email' => $user['email'],
+                'password' => bcrypt($user['password']),
                 'is_admin' => $user['is_admin'],
-                'password' => bcrypt($user['password'])
             ]);
         }
     }
